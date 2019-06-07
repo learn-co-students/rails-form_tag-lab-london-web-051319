@@ -1,0 +1,18 @@
+<h1>Student Form</h1>
+
+<%=form_tag students_path do%>
+
+<div>
+<label>First name</label><br>
+<%= text_field_tag :'student[first_name]'%>
+</div>
+<div>
+<label>Last name</label><br>
+<%= text_field_tag :'student[last_name]' %>
+</div>
+<% hidden_field_tag :authenticity_token, form_authenticity_token %>
+<div>
+<%= submit_tag "Submit Student" %>
+</div>
+
+<% end %>
